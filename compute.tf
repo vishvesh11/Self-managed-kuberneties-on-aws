@@ -1,7 +1,7 @@
 data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 locals {
-  cluster_name = "k3s-slatemate-prod"
+  cluster_name = "k3s-prod"
 }
 
 data "aws_ami" "ubuntu" {
