@@ -1,0 +1,8 @@
+---
+plugin: amazon.aws.aws_ec2
+regions:
+  - ap-south-1
+strict: false
+keyed_groups:
+  - key: tags.Role
+    prefix: role

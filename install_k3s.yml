@@ -1,0 +1,8 @@
+---
+- hosts: masters
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: Install K3s on the master node
+      shell: "curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='server --tls-san {{ ansible_host }} ' sh -"
+      changed_when: true
